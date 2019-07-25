@@ -1,0 +1,170 @@
+#main_wrapper
+{
+    padding-top:120px;
+}
+/*****************************************************************************\
+
+
+                *POINTS COMMUNS ENTRE LA 2ème et LA 3ème SECTION*
+
+
+\*****************************************************************************/
+/***TITRES DES 1ère et 2ème SECTION***/
+.entete h2, .entete h2
+{
+    font-size: 2em; 
+}
+/*****************************************************************************\
+
+
+                        *EN-TETE*
+
+
+\*****************************************************************************/
+header
+{
+    background-image: none;
+    background-color: white;
+}
+header nav a
+{
+    font-size: 1.2em;
+    color: #727273;
+}
+/*****************************************************************************\
+
+
+                        *1ère SECTION -DIAPORAMA D'ACCUEIL*
+
+
+\*****************************************************************************/
+#section1
+{
+    padding-bottom: 100px;
+}
+#diapositifs
+{
+    max-width:300%;
+}
+#img1
+{
+    position:absolute;
+    top:25%;
+    left:0;
+}
+#diaporama_description
+{
+    position:absolute;
+    left:5%;
+    line-height : 30px;
+}
+#img1 h1
+{
+    line-height : 40px;
+    font-size: 2em;    
+}
+        /*TEXTE D'ACCROCHE AVEC BOUTON FICTIF*/
+#diaporama_description p
+{
+    font-size: 1em;  
+}
+        /*CHRONOLOGIE*/
+div #timeline
+{
+    display:none;
+}
+/*****************************************************************************\
+
+
+                        *2ème SECTION - NOS SERVICES*
+
+
+\*****************************************************************************/
+#section2
+{
+    padding-bottom: 100px;
+    background-color: #F2F2F2;
+}
+        /*ASIDE*/
+#mac
+{
+    margin-left:4%;
+    margin-bottom:30%;
+}
+        /*ARTICLE*/
+#services article
+{
+    position: absolute;
+    top: 20%;   
+}
+#line /*paramètre de la font awesome line*/
+{
+    position:absolute;
+    right: 100%;
+}
+#cubes /*paramètre de la font awesome cubes*/
+{
+    position:absolute;
+    right: 100%;
+}
+#pie /*paramètre de la font awesome pie*/
+{
+    position:absolute;
+    right: 100%;
+}
+/*****************************************************************************\
+
+
+                        *3ème SECTION - NOS PROJETS*
+
+
+\*****************************************************************************/
+#section3
+{
+    padding-bottom: 100px;
+}
+#portfolio
+{
+    padding-top: 20px;
+}
+/* boutons de filtrages */
+.container
+{
+    margin-top: 0;
+}
+.container .boutons
+{
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin:auto;
+}
+.container label:hover
+{
+    color:tomato;   
+}
+/*****************************************************************************\
+
+
+                        *4ème SECTION - CONTACT INFO*
+
+
+\*****************************************************************************/
+#section4
+{
+    padding-bottom: 100px;
+    background-color: #F2F2F2;
+}
+/***FORMULAIRE FICTIF***/
+form
+{
+    position:absolute;
+    right: 5%;
+    width: 20%;
+    height: 70%;
+}
+/*EN-TETE DU FORMILAIRE*/
+#contact h4
+{
+    margin-left: 10%;  
+}

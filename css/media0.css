@@ -1,0 +1,568 @@
+#main_wrapper
+{
+    padding-top:0;
+}
+/*****************************************************************************\
+
+
+                *POINTS COMMUNS ENTRE LA 2ème et LA 3ème SECTION*
+
+
+\*****************************************************************************/
+/***TITRES DES 1ère et 2ème SECTION***/
+.entete h2, .entete h2
+{
+    font-size: 0.9em;
+}
+/***PARAGRAPHES SOUS LE TITRE des 1ère et 2ème SECTION***/
+#services p, #portfolio p /*paragraphes sous les titres des 1ère et 2ème SECTION*/
+{
+    font-size: 0.9em;
+    width:95%;
+}
+/*****************************************************************************\
+
+
+                        *EN-TETE*
+
+
+\*****************************************************************************/
+header
+{
+    height: 40px;
+}
+#logo
+{
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+    padding:0;
+}
+#logo img
+{
+    width: 90%;
+    margin:0;
+    padding:0;
+}
+#menu_header
+{
+    position:absolute;
+    width:0;
+    height:250%;
+    margin:0 0 0 690%;
+    margin-top:45%;
+    padding:55px;
+    padding-top:10%;
+    background: #41A1CB;
+    text-align: right;
+    border-radius:12px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /*lissage de la typo sans crénelage*/
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smothing:grayscale;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transfom:translate(0, -100%);
+    -moz-transfom:translate(0, -100%);
+    -ms-transfom:translate(0, -100%);
+    -o-transfom:translate(0, -100%);
+    transfom:translate(0, -100%);
+    -webkit-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    -moz-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    -ms-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    -o-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    cursor: pointer;
+}
+#menu_header li
+{
+    padding: 0px;
+}
+#menu_bascule input:checked~#menu_header
+{
+    -webkit-transform:scale(1.0,1.0) translateX(-255%);
+    -moz-transform:scale(1.0,1.0)translateX(-255%);
+    -ms-transform:scale(1.0,1.0)translateX(-255%);
+    -o-transform:scale(1.0,1.0)translateX(-255%);
+    transform:scale(1.0,1.0)translateX(-255%);
+    opacity:1;
+}
+#menu_bascule
+{
+    display:block;
+    position:relative;
+    top:-10px;
+    right:8px;
+    z-index: 1;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+#menu_bascule input
+{
+    display:block;
+    width:40px;
+    height:32px;
+    position: absolute;
+    top:7px;
+    right:0px;
+    cursor:pointer;
+    opacity:0;
+    z-index: 2;
+    -webkit-touch-callout:none;
+}
+/*
+*menu hamburger devient une croix
+*/
+#menu_bascule span
+{
+    display:block;
+    width:33px;
+    height:4px;
+    margin-bottom:5px;
+    position:relative;
+    top:15px;
+    right:10px;
+    background: #41A1CB;
+    border-radius:3px;
+    z-index: 1;
+    -webkit-transform-origin:4px 0px;
+    -moz-transform-origin:4px 0px;
+    -ms-transform-origin:4px 0px;
+    -o-transform-origin:4px 0px;
+    transform-origin:4px 0px;
+    -webkit-transition:transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+    -moz-transition:transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+    -ms-transition:transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+    -o-transition:transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+    transition:transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+}
+#menu_bascule span:first-child
+{
+    transform-origin:0% 0%;  
+}
+#menu_bascule span:nth-last-child(2)
+{
+    transform-origin:0% 100%;
+}
+/*
+*Tansfomation des couches hamburger en coix.
+*/
+#menu_bascule input:checked~span
+{
+    opacity:1;
+    -webkit-transform:rotate(45deg) translate(-2px, -1px);
+    -moz-transform:rotate(45deg) translate(-2px, -1px);
+    -ms-transform:rotate(45deg) translate(-2px, -1px);
+    -o-transform:rotate(45deg) translate(-2px, -1px);
+    transform:rotate(45deg) translate(-2px, -1px);
+    background:tomato;
+}
+/*
+*cachons la couche du milieu de l'hamburger
+*/
+#menu_bascule input:checked~span:nth-last-child(3)
+{
+    opacity:0;
+    -webkit-transform:rotate(0deg) scale(0.2,0.2);
+    -moz-transform:rotate(0deg) scale(0.2,0.2);
+    -ms-transform:rotate(0deg) scale(0.2,0.2);
+    -o-transform:rotate(0deg) scale(0.2,0.2);
+    transform:rotate(0deg) scale(0.2,0.2);
+}
+/*
+*dernière couche de l'hamburger va dans l'autre sens
+*/
+#menu_bascule input:checked~span:nth-last-child(2)
+{
+    opacity:1;
+    -webkit-transform:rotate(-45deg) translate(0,-1px);
+    -moz-transform:rotate(-45deg) translate(0,-1px);
+    -ms-transform:rotate(-45deg) translate(0,-1px);
+    -o-transform:rotate(-45deg) translate(0,-1px);
+    transform:rotate(-45deg) translate(0,-1px);
+}
+header nav a
+{
+    
+    display:inline-block;
+    font-size: 0.9em;
+    transform: translateX(-50%);
+    font-weight: bolder;
+    color: white;
+    width:90px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom:5px;
+    margin:0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+header nav a:hover
+{
+    color:#41A1CB;
+    border-top: 0px;
+    background-color: tomato;
+}
+header nav
+{   
+    margin-left: 0;
+    margin-right: 0;
+}
+/*****************************************************************************\
+
+
+                        *1ère SECTION -DIAPORAMA D'ACCUEIL*
+
+
+\*****************************************************************************/
+#accueil
+{
+    height:140px;
+    padding:0;
+}
+#diaporama_description
+{
+    position:absolute;
+    left:2%;
+    line-height : 7px;
+}
+#diapositifs
+{
+    -webkit-animation: 15s slider_left_right infinite;
+    -moz-animation: 15s slider_left_right infinite;
+    animation: 15s slider_left_right infinite;
+}
+/***ANIMATION***/
+-webkit-@keyframes slider_left_right
+{
+     5% {left:0%;}
+    20% {left:-100%;}
+    30% {left:-100%;}
+    45% {left:-200%;}
+    55% {left:-200%;}
+    70% {left:-100%;}
+    80% {left:-100%;}
+    95% {left:0%;}     
+}
+-moz-@keyframes slider_left_right
+{
+     5% {left:0%;}
+    20% {left:-100%;}
+    30% {left:-100%;}
+    45% {left:-200%;}
+    55% {left:-200%;}
+    70% {left:-100%;}
+    80% {left:-100%;}
+    95% {left:0%;}    
+}
+@keyframes slider_left_right
+{  
+    5%  {left:0%;}
+    20% {left:-100%;}
+    30% {left:-100%;}
+    45% {left:-200%;}
+    55% {left:-200%;}
+    70% {left:-100%;}
+    80% {left:-100%;}
+    95% {left:0%;}   
+}
+/***CHRONOLOGIE DU DEFILEMENT D'UNE IMAGE***/
+div #timeline
+{
+    z-index: 10;
+    margin-bottom: 100%;
+    border: 2px solid #41A1CB;
+    width:100%;
+    animation: 15s chronologie infinite;
+    animation-fill-mode:forwards;
+}
+@keyframes chronologie
+{
+    0% {width:100%;}
+    5% {width:0%;}
+    20% {width:100%;}
+    30% {width:0%;}
+    45% {width:100%;}
+    55% {width:0%;}
+    70% {width:100%;}
+    80% {width:0%;}
+    95% {width:100%;}   
+}
+        /*TEXTE D'ACCROCHE AVEC BOUTON FICTIF*/
+#img1 h1
+{
+    line-height : 20px;
+    font-size: 0.8em;    
+}
+#diaporama_description p
+{
+    font-size: 0.6em;   
+}
+/***BOUTONS FICTIFS***/
+#img1 input
+{
+    font-size: 0.6em;
+    width: 75px;
+    height: 27px;
+}
+#bouton_d2
+{
+    display:none;
+}
+#bouton_g1
+{
+    display:none;
+}
+#bouton_d3
+{
+    display:none;
+}
+#bouton_g2
+{
+    display:none;
+}
+#img1
+{
+    position:absolute;
+    top:7%;
+}
+/*****************************************************************************\
+
+
+                        *2ème SECTION - NOS SERVICES*
+
+
+\*****************************************************************************/
+#services
+{
+    height:1400px;
+}
+        /*ASIDE*/
+#mac
+{   
+    position: absolute;
+    top:22%;
+    left:2%;
+    width:80%;
+    text-align: center;
+}
+        /*ARTICLE*/
+#services article
+{
+    position: absolute;
+    top: 45%;
+    right:5%;
+    width:80%;
+    padding-left:50px;
+    padding:0;
+    padding-right:2%;
+    font-size: 0.9em; 
+}
+#line /*paramètre de la font awesome line*/
+{
+    padding: 10px;
+}
+#line .fa-circle /*imbrication de font awesome circle*/
+{
+    position: absolute;
+    left: 39px;
+}
+#cubes /*paramètre de la font awesome cubes*/
+{
+    padding: 10px;
+}
+#cubes .fa-circle /*imbrication de font awesome circle*/
+{
+    position: absolute;
+    left: 39px;
+}
+#pie /*paramètre de la font awesome pie*/
+{
+    padding: 10px;
+}
+#pie .fa-circle /*imbrication de font awesome circle*/
+{
+    position: absolute;
+    left: 39px;
+}
+/*****************************************************************************\
+
+
+                        *3ème SECTION - NOS PROJETS*
+
+
+\*****************************************************************************/
+#portfolio
+{
+    height: 1350px;
+    padding-top: 20px;
+}
+.item
+{
+    width:95%;
+	padding-top:3%;
+}
+.item li
+{
+    width:44%;
+    margin:5px;
+}
+.container input.cat_1:checked ~ .item li:not(.type_1),.container input.cat_2:checked ~ .item li:not(.type_2),.container input.cat_3:checked ~ .item li:not(.type_3)
+{
+    display:none; 
+}
+.item li a figure .description
+{
+    font-size: 0.6em; 
+}
+.item li a figure:hover .description
+{
+    height:85%;
+}
+.item li a figure .description i
+{
+    position:absolute;
+    top:-14px;
+    padding: 5px;
+}
+.item li a figure span h4
+{
+    font-size: 0.6em;
+}
+.item li a figure .description h5
+{
+    font-size: 0.8em;
+    line-height: 10px;
+}
+.item li a figure .description h5 strong
+{
+    font-size: 0.8em;
+}
+/* boutons de filtrages */
+.container
+{
+    margin-top:0;
+}
+.container .boutons
+{
+    width:90%;
+    margin:auto;
+}
+.container .boutons label
+{
+    font-size:0.6em;
+    width: 90%;
+    transform: translateX(-100%);
+    height: 30px;
+    margin-top:10px;
+    margin-bottom:30px;  
+}
+.container label:hover
+{
+    color:tomato;
+}
+.container label.label_all
+{
+    margin-left:20%;
+}
+.boutons #arrow_all
+{
+    border:8px solid transparent;
+    border-top: 25px solid #c2e1f5;
+    position:absolute;
+    top:99%;
+    left:39%;
+}
+.boutons #arrow_1
+{
+    border:8px solid transparent;
+    border-top: 25px solid #c2e1f5;
+    position:absolute;
+    top:99%;
+    left:40.5%;
+}
+.boutons #arrow_2
+{
+    border:8px solid transparent;
+    border-top: 25px solid #c2e1f5;
+    position:absolute;
+    top:99%;
+    left:40.5%;
+}
+.boutons #arrow_3
+{
+    border:8px solid transparent;
+    border-top: 25px solid #c2e1f5;
+    position:absolute;
+    top:99%;
+    left:40.5%;
+}
+/*****************************************************************************\
+
+
+                        *4ème SECTION - CONTACT INFO*
+
+
+\*****************************************************************************/
+/***FORMULAIRE FICTIF***/
+form
+{
+    position:absolute;
+    right: 5%;
+    width: 45%;  
+}
+#contact h3
+{
+    font-size: 1em;
+}
+/*EN-TETE DU FORMILAIRE*/
+#contact h4
+{
+    margin-left: 10%;
+    font-size: 0.8em;
+}
+#contact p
+{
+    font-size: 0.8em;
+}
+/*CHAMPS DE TEXTE*/
+#name
+{
+    position:absolute;
+    top: 25%;
+    font-size: 0.8em;
+}
+#email
+{
+    position:absolute;
+    top:31%;
+    font-size: 0.8em;
+}
+#subject
+{
+    position:absolute;
+    top: 37%;
+    font-size: 0.8em;
+}
+#message
+{
+    font-size: 0.8em;
+}
+/*BOUTON-FICTIF D'ENVOI*/
+#submit
+{
+    width: 80%;
+    font-size: 0.7em;
+}

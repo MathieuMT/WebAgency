@@ -1,0 +1,1092 @@
+/*
+*------LAYOUT
+*/
+@font-face {
+	font-family: 'GLYPHICONS Halflings';
+	src: url('GLYPHICONSHalflings-Regular.eot');
+	src: url('GLYPHICONSHalflings-Regular.eot?#iefix') format('embedded-opentype'),
+		url('GLYPHICONSHalflings-Regular.woff') format('woff'),
+		url('GLYPHICONSHalflings-Regular.ttf') format('truetype'),
+		url('GLYPHICONSHalflings-Regular.svg#GLYPHICONSHalflings-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#main_wrapper
+{
+    padding-top:100px;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap:wrap;
+    justify-content: center;
+    overflow-x: hidden;
+}
+/*****************************************************************************\
+
+
+                *POINTS COMMUNS ENTRE LA 2ème et LA 3ème SECTION*
+
+
+\*****************************************************************************/
+/***ligne de séparation entre les sections***/ 
+hr 
+{
+    width:60%; 
+    margin:auto;
+    size:1em;
+    noshade color:#E9EAE9; 
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+/***TITRES DES 1ère et 2ème SECTION***/
+.entete
+{
+    position:relative;
+}
+.entete h2, .entete h2
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    text-transform: uppercase;
+    color:black;
+    line-height : 25px;
+    text-align: center;
+    margin:0;    
+}
+/***TRAIT de SEPARATION entre TITRES et PARAGRAPHES***/
+.border1
+{
+    position: absolute;
+    top: 150%;
+    left:50%;
+    transform:translateX(-50%);
+    border: 1px solid #E9EAE9;
+    width: 96px;
+    z-index: 1;        
+}
+/***RONG de SEPARATION entre TITRES et PARAGRAPHES***/
+.fa-circle
+{
+    position: absolute;
+    top: 110%;
+    left:50%;
+    margin:0;
+    transform:translateX(-50%);
+    text-align: center;
+    color: #41A1CB;
+    border-radius: 1px solid white;
+    background-color: white;
+    padding: 3px;
+    z-index: 2;
+}
+/***PARAGRAPHES SOUS LE TITRE des 1ère et 2ème SECTION***/
+#services .p1, #portfolio .p2
+{
+    width: 94%;
+    margin:auto;
+    margin-top:6%;
+    padding: 0;
+}
+#services p, #portfolio p /*paragraphes sous les titres des 1ère et 2ème SECTION*/
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 auto;
+    color:#727273;
+    width:80%;
+}
+/*****************************************************************************\
+
+
+                        *EN-TETE*
+
+
+\*****************************************************************************/
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-image:url("http://mmtmc.alwaysdata.net/images/blog/03.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.9;
+    width: 100%;
+    height: 60px;
+    margin:0;
+    padding:0;
+    padding-top:20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left:100px;
+    margin-right:100px;
+    margin-bottom: 20px;   
+}
+#logo img
+{
+    width: 100%;
+    height:auto;
+}
+input[type=checkbox]
+{
+    position:absolute;
+    top:65px;
+    z-index: 1;
+    display:none;
+}
+#menu_header
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding:0;
+    margin:0;
+}
+#menu_header li
+{
+    margin-right: 15px;
+}
+header nav a
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    font-size: 1em;
+    color: #727273;
+    text-decoration: none;
+    padding-top: 20px;
+}
+header nav a:hover
+{
+    border-top: 4px solid #41A1CB;
+}
+/*****************************************************************************\
+
+
+                        *1ère SECTION -DIAPORAMA D'ACCUEIL* 
+
+
+\*****************************************************************************/
+#section1
+{
+    padding-bottom: 80px;
+}
+#accueil
+{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    height:500px;
+    margin:0;
+    padding: 0;
+    position: relative;
+}
+#diaporama
+{
+    width:100%;
+    height:500px;
+    margin:0;
+    position:absolute;
+    top:0;
+    padding:0;
+    overflow: hidden;
+}
+#diapositifs
+{
+    list-style:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:300%;
+    height:500px;
+    margin:0;
+    padding:0;
+    z-index:10;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+#diapositifs li
+{
+    margin-top:0%;
+    padding:0;
+    float:left;
+    width: 33%;
+}
+#diapositifs li figure
+{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+#diapositifs li img
+{
+    display: inline-block;
+    width: 100%;
+}
+#diaporama .next
+{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:20;
+}
+#diaporama .prev
+{
+    position:absolute;
+    top: 50%;
+    left: 0;
+    z-index:30;
+}
+/*initialisation*/
+#diaporama .next, #diaporama .prev
+{
+    display:none;
+}
+#diaporama .next1
+{
+    display:block;
+}
+/*vers 1ère étape*/
+#d1:target #diapositifs 
+{
+    left:0;
+}
+#d1:target .next, #d1:target .prev
+{
+    display: none;
+}
+#d1:target .next1
+{
+    display:block;
+}
+/*vers la 2ème étape*/
+#d2:target #diapositifs
+{
+    left:-100%;
+}
+#d2:target .next, #d2:target .prev
+{
+    display:none;
+}
+#d2:target .next2, #d2:target .prev2
+{
+    display:block;
+}
+/*vers 3ème étape*/
+#d3:target #diapositifs
+{
+    left: -200%;
+}
+#d3:target .prev3 
+{
+    display:block;
+}
+#bouton_d2
+{
+    display:flex;
+    position:absolute;
+    top:50%;
+    right:0;
+    height: 50px;
+    width:25px;
+    border-radius:50px 0 0 50px;
+    background-color: #4E5052;
+    margin-top: 275px;
+    z-index:30;
+    cursor: pointer; 
+}
+#bouton_g1
+{
+    display:flex;
+    position:absolute;
+    left:0;
+    top:34%;
+    height:50px;
+    width:25px;
+    border-radius: 0 50px 50px 0;
+    background-color: #4E5052;
+    margin-top: 0;
+    z-index:30;
+    cursor: pointer;
+}
+#bouton_d3
+{
+    display:flex;
+    position:absolute;
+    top:50%;
+    right:0;
+    height: 50px;
+    width:25px;
+    border-radius:50px 0 0 50px;
+    background-color: #4E5052;
+    margin-top: 275px;
+    z-index:30;
+    cursor: pointer; 
+}
+#bouton_g2
+{
+    display:flex;
+    position:absolute;
+    left:0;
+    top:34%;
+    height:50px;
+    width:25px;
+    border-radius: 0 50px 50px 0;
+    background-color: #4E5052;
+    margin-top: 0;
+    z-index:30;
+    cursor: pointer;
+}
+.fa-chevron-left
+{
+    color:white;
+    position:absolute;
+    top:17px;
+    left:3px; 
+}
+.fa-chevron-right
+{
+    color:white;
+    position:absolute;
+    top:17px;
+    right:3px;
+}
+#img1
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position:absolute;
+    top:50%;
+    left:0;
+    text-align: left;
+    z-index:19;
+}
+#diaporama_description
+{
+    width:auto;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position:absolute;
+    top:40%;
+    left:10%;
+    text-align: left; 
+}
+#img1 h1
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    text-transform: uppercase;
+    color:white;
+    line-height : 25px;
+    margin:0;
+    font-size: 1.6em;    
+}
+h1 strong
+{
+    color:#41A1CB;
+    text-transform: uppercase;
+}
+        /*TEXTE D'ACCROCHE AVEC BOUTON FICTIF*/
+#diaporama_description p
+{
+    margin:0;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    font-size: 0.8em;
+    color:white;   
+}
+/***BOUTONS FICTIFS***/
+#img1 input
+{
+    text-decoration: none; 
+    font-size: 0.9em;
+    text-align: center;
+    width: 105px;
+    height: 37px;
+    background-color:#41A1CB;
+    color:white;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-color: #c2e1f5;
+    border-bottom-width: 5px;
+    border-bottom-style: solid inset;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+}
+/*****************************************************************************\
+
+
+                        *2ème SECTION - NOS SERVICES*
+
+
+\*****************************************************************************/
+#section2
+{
+    background-color: #F2F2F2;
+    padding-bottom: 60px;
+}
+#services
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+#services p strong
+{
+    color:#727273;
+    text-transform: uppercase; 
+}
+        /*ASIDE*/
+#mac
+{
+    margin-left:8%;
+    width:35%;
+    height:auto;
+    padding:0;
+    cursor: pointer;
+}
+#mac:hover
+{
+    box-shadow: 0 0 30px #41A1CB;   
+}
+#mac img
+{
+    padding-top:10px;
+    max-width: 100%;
+    height:auto;
+    -webkit-transition: all 100ms ease-in-out;
+    -webkit-transform:scale(1);
+    -ms-transition: all 100ms ease-in-out;
+    -ms-transform:scale(1);
+    -moz-transition: all 100ms ease-in-out;
+    -moz-transform:scale(1);
+    transition: all 100ms ease-in-out;
+    transform:scale(1);
+}
+#mac img:hover
+{
+    box-shadow: 0 0 30px #41A1CB;
+     -webkit-transition: all 100ms ease-in-out;
+    -webkit-transform:scale(1.2);
+    -ms-transition: all 100ms ease-in-out;
+    -ms-transform:scale(1.2);
+    -moz-transition: all 100ms ease-in-out;
+    -moz-transform:scale(1.2);
+    transition: all 100ms ease-in-out;
+    transform:scale(1.2);
+}
+        /*ARTICLE*/
+#services article
+{
+    disiplay: flex;
+    flex-wrap:wrap;
+    position: absolute;
+    top: 25%;
+    right:5%;
+    width:40%;
+    height:auto;
+    margin:0;
+    padding:0;
+    padding-right:2%;
+    color: #727273;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    font-size: 1.2em;
+    text-align: justify;   
+}
+/***LISTE NON ORDONNEE***/
+#services ul
+{
+    list-style: none;
+}
+/***TITRE DE L'ARTICE***/
+#services article h3
+{
+    color:black;    
+}
+/***IMAGES DES PUCES DE LA LISTE (avec imbrication des font awesome***/
+#services article div
+{
+    cursor: pointer;
+}
+#services article div:hover
+{
+    box-shadow: 0 0 20px #41A1CB;
+}
+.fa-stack  /*position des font awesome*/
+{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#line /*paramètre de la font awesome line*/
+{
+    position:absolute;
+    top: 5%;
+    right: 95%;
+    color: #41A1CB;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 20px;
+}
+#line .fa-line-chart /*superposition font awesome line*/
+{
+    z-index: 3;
+}
+#line .fa-circle /*imbrication de font awesome circle*/
+{
+    color: #41A1CB;
+    position: absolute;
+    left: 56px;
+    top: 0;
+    border-radius: 1px solid white;
+    background-color: white;
+    padding: 3px;
+    z-index: 2;
+}
+#cubes /*paramètre de la font awesome cubes*/
+{
+    position:absolute;
+    top: 40%;
+    right: 95%;
+    color: #41A1CB;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 20px;
+}
+#cubes .fa-cubes /*superposition font awesome cubes*/
+{
+    z-index: 3;
+}
+#cubes .fa-circle /*imbrication de font awesome circle*/
+{
+    color: #41A1CB;
+    position: absolute;
+    left: 56px;
+    top: 0;
+    border-radius: 1px solid white;
+    background-color: white;
+    padding: 3px;
+    z-index: 2;
+}
+#pie /*paramètre de la font awesome pie*/
+{
+    position:absolute;
+    top: 75%;
+    right: 95%;
+    color: #41A1CB;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 20px;
+}
+#pie .fa-pie-chart /*superposition font awesome pie*/
+{
+    z-index: 3; 
+}
+#pie .fa-circle /*imbrication de font awesome circle*/
+{
+    color: #41A1CB;
+    position: absolute;
+    left: 56px;
+    top: 0;
+    border-radius: 1px solid white;
+    background-color: white;
+    padding: 3px;
+    z-index: 2;
+}
+/*****************************************************************************\
+
+
+                        *3ème SECTION - NOS PROJETS*
+
+
+\*****************************************************************************/
+#section3
+{
+    padding-bottom: 60px;
+}
+#portfolio
+{
+    background-color: #F2F2F2;
+    width:100%;
+    height: 1150px;
+    position:relative;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    display:block;
+    text-align: center;
+    vertical-align: baseline;
+}
+.item
+{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:97%;
+    height:auto;
+    position: relative;
+	margin:0 auto;
+	padding-top:3%;
+    padding:0;
+    list-style: none;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+}
+.item li
+{
+    height:auto;
+    width:22%;
+    margin:10px;
+    padding:0;
+    opacity:1;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    -webkit-transition:opacity 0.6s ease-in-out;
+    -moz-transition:opacity 0.6s ease-in-out;
+    -ms-transition:opacity 0.6s ease-in-out;
+    -o-transition:opacity 0.6s ease-in-out;
+    transition:opacity 0.6s ease-in-out;
+}
+.container input.cat_1:checked ~ .item li:not(.type_1),.container input.cat_2:checked ~ .item li:not(.type_2),.container input.cat_3:checked ~ .item li:not(.type_3)
+{
+    opacity:0.1; 
+}
+.item li a
+{
+    display:block;
+    position:relative;
+    width:100%;
+    margin:0;
+    margin-bottom:20%;
+    margin-right:20%;
+    padding:0;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    text-decoration: none;
+}
+.item li a figure
+{
+    width:100%;
+    position:relative;
+    padding:0;
+    margin:0;
+}
+.item li a figure .description
+{
+    display:block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    color:white;
+    width:100%;
+    position:absolute;
+    left:0;
+    bottom:100%;
+    height:0;
+    margin:0;
+    padding:0;
+    opacity: 0;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition:opacity 0.6s ease-in-out;
+    -moz-transition:opacity 0.6s ease-in-out;
+    -ms-transition:opacity 0.6s ease-in-out;
+    -o-transition:opacity 0.6s ease-in-out;
+    transition:opacity 0.6s ease-in-out;
+    -webkit-transition:height 0.6s ease-in-out;
+    -moz-transition:height 0.6s ease-in-out;
+    -ms-transition:height 0.6s ease-in-out;
+    -o-transition:height 0.6s ease-in-out;
+    transition:height 0.6s ease-in-out;
+    font-size: 0.8em;
+    text-align: left;
+    line-height: 1em;
+}
+.item li a figure:hover .description
+{
+    width:100%;
+    height:53%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.6);
+    padding: 0;
+    position: absolute;
+    bottom:0%;
+}
+.item li a figure .description i
+{
+    position:absolute;
+    top:-17px;
+    right:0;
+    padding: 10px;
+    color:white;
+    opacity: 1;
+    background-color: #41A1CB;
+    border-radius:50%;
+    border:3px solid white;
+}
+.item li a figure .description i:hover
+{ 
+    opacity:1;
+}
+.item li a figure .description h4
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    text-align: left;
+    opacity: 1;
+    padding-left: 5px;
+}
+.item li a figure .description h5
+{
+    color:white;
+    width:98%;
+    padding:0;
+    padding-left:5px;
+    margin:0;
+    position:absolute;
+    top:35px;
+    line-height: 20px;
+    text-align: justify;
+    font-size: 0.9em;
+    text-align: left;
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    word-wrap: break-word;
+}
+.item li a figure .description h5 strong
+{
+    font-family:'GLYPHICONS Halflings', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    color:white;
+    text-transform: uppercase;
+}
+.item li a figure img
+{
+    width:100%;
+    display:block;
+    z-index:1;
+}
+/* boutons de filtrages */
+.container
+{
+    max-width:99%;
+    width:100%;
+    padding: 0;
+    position:relative;
+    margin:auto;
+    margin-top: 8%;    
+}
+.container .boutons label
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    background-color: rgb(233, 234, 233);
+    cursor:pointer;
+    font-size:1em;
+    color:rgb(114, 114, 115);
+    position:relative;
+    width: 100px;
+    height: 40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform:translateX(-200%);
+    margin-top:4%;
+    margin-bottom: 50px;  
+}
+.containe .boutons label:hover
+{
+    color:tomato; 
+}
+.container .boutons label.label_all
+{
+    margin-left:36.4%;
+    border-radius: 5px 0px 0px 5px;
+}
+.container .boutons label.label_1
+{
+    border-radius:0;
+}
+.container .boutons label.label_2
+{
+    border-radius:0;
+}
+.container .boutons label.label_3
+{
+    border-radius: 0px 5px 5px 0px;
+}
+input.cat_all:checked~.boutons label.label_all, input.cat_1:checked~.boutons label.label_1,input.cat_2:checked~.boutons label.label_2, input.cat_3:checked~.boutons label.label_3 
+{
+    color:white;
+    background-color: #88b7d5;
+    border-bottom: 4px #c2e1f5 inset;
+}
+.container input
+{
+    display:none;
+}
+.container .boutons
+{
+    display:flex;
+    juestify-content:center;
+}
+.boutons #arrow_all
+{
+    border:10px solid transparent;
+    border-top: 30px solid #c2e1f5;
+    position:absolute;
+    top:40px;
+    left:40%;
+    opacity:0;
+}
+.boutons #arrow_all:hover
+{
+    opacity:1;
+}
+.boutons #arrow_1
+{
+    border:10px solid transparent;
+    border-top: 30px solid #c2e1f5;
+    position:absolute;
+    top:40px;
+    left:40%;
+    opacity:0;
+}
+.boutons #arrow_1:hover
+{
+    opacity:1;
+}
+.boutons #arrow_2
+{
+    border:10px solid transparent;
+    border-top: 30px solid #c2e1f5;
+    position:absolute;
+    top:40px;
+    left:40%;
+    opacity:0;
+}
+.boutons #arrow_2:hover
+{
+    opacity:1;
+}
+.boutons #arrow_3
+{
+    border:10px solid transparent;
+    border-top: 30px solid #c2e1f5;
+    position:absolute;
+    top:40px;
+    left:40%;
+    opacity:0;
+}
+.boutons #arrow_3:hover
+{
+    opacity:1;
+}
+/*****************************************************************************\
+
+
+                        *4ème SECTION - CONTACT INFO*
+
+
+\*****************************************************************************/
+#section4
+{
+    background-color: #F2F2F2;
+    padding-bottom: 60px;
+}
+
+
+#contact  
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    height:800px;
+    margin:0;
+    padding: 0;
+    position: relative;
+    background-color:rgb(136, 183, 213);
+    
+    
+}
+
+.fond {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 800px;
+    background-color: red;
+    opacity: 0.3;
+    z-index:5;
+    
+}
+
+/***IFRAME DE GOOGLE MAP***/
+
+#contact iframe 
+{
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 800px;
+    z-index: 4;
+    filter: blur(0.5px);      
+}
+
+/***FORMULAIRE FICTIF***/
+form
+{
+    background-color: rgba(242,242,242,0.8);
+    position:absolute;
+    right: 10%;
+    top: 10%;
+    width: 25%;
+    height: 65%;
+    z-index: 6;
+}
+
+#contact h3
+{
+    font-family:'GLYPHICONS Halflings', sans-serif;
+    width: 80%;
+    text-align: left;
+    margin-left: 10%;
+    color: black;   
+}
+/*POINTS COMMUNS ENTRE LE TITRE h4, LE PARAGRAPHE, lE NOM, L'EMAIL,L'OBJET ET LE COMMENTAIRE*/
+#contact h4, #contact p, #name, #email, #subject, #message
+{
+    font-family:'GLYPHICONS Halflings', sans-serif;
+    width: 80%;
+    text-align: left;
+    color: #727273;   
+}
+/*POINTS COMMUNS ENTRE LES INPUT: NAME, EMAIL, SUBJECT ET MESSAGE*/
+#name, #email, #subject, #message
+{
+    transform:translateX(-50%);
+}
+/*EN-TETE DU FORMILAIRE*/
+#contact h4
+{
+    margin-left: 0%;
+    margin-bottom: 0;
+    margin-top: 0;   
+}
+#contact p
+{
+    margin-left: 10%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+/*CHAMPS DE TEXTE*/
+#name
+{
+    position:absolute;
+    left:50%;
+    top: 30%;
+    font-size: 1em;
+}
+#email
+{
+    position:absolute;
+    left:50%;
+    top:35%;
+    font-size: 1em;
+}
+#subject
+{
+    position:absolute;
+    left:50%;
+    top: 40%;
+    font-size: 1em;
+}
+#message
+{
+    position:absolute;
+    left:50%;
+    bottom: 20%;
+    font-size: 1em;
+}
+/*BOUTON-FICTIF D'ENVOI*/
+#submit
+{
+    font-family:'GLYPHICONS Halflings', sans-serif;
+    width: 45%;
+    height: auto;
+    margin-left: 10%;
+    position: absolute;
+    bottom:10%;
+    text-align: center;
+    color:white;
+    background-color:#41A1CB; 
+    font-size: 0.8em;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-color: #c2e1f5;
+    border-bottom-width: 5px;
+    border-bottom-style: solid inset;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+}
+
+/*
+
+#fond {
+    background-color: rgba(136,183,213, 0.4);
+    z-index: 200;
+    width: 100%;
+    height:800px;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+}
+#contact iframe 
+{
+    width: 100%;
+    height:800px;
+
+*/
+

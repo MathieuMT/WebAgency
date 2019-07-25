@@ -1,0 +1,372 @@
+#main_wrapper
+{
+    padding-top:0;
+}
+/*****************************************************************************\
+
+
+                *POINTS COMMUNS ENTRE LA 2ème et LA 3ème SECTION*
+
+
+\*****************************************************************************/
+/***TITRES DES 1ère et 2ème SECTION***/
+.entete h2, .entete h2
+{
+    font-size: 1.8em;
+}
+/***PARAGRAPHES SOUS LE TITRE des 1ère et 2ème SECTION***/
+#services p, #portfolio p /*paragraphes sous les titres des 1ère et 2ème SECTION*/
+{
+    font-size: 0.9em;
+}
+/*****************************************************************************\
+
+
+                        *EN-TETE*
+
+
+\*****************************************************************************/
+#logo
+{
+    margin-left:1%;
+    margin-right:0;
+    margin-bottom: 10px;   
+}
+header
+{
+    padding:0;
+    padding-top:10px;
+    background-image: none;
+    background-color: white;
+}
+header nav
+{
+    margin:0px;
+    padding:0px;
+    margin-left: 0;
+    margin-right: 10%;
+}
+header nav a
+{
+    font-size: 1.1em;
+}
+/*****************************************************************************\
+
+
+                        *1ère SECTION -DIAPORAMA D'ACCUEIL*
+
+
+\*****************************************************************************/
+#accueil
+{
+    height:380px;
+}
+#diaporama_description
+{
+    position:absolute;
+    top:5%;
+    left:10%;
+}
+#diapositifs
+{
+    list-style:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:300%;
+    margin:0;
+    padding:0;
+    z-index:10;
+    -webkit-animation: 15s slider_left_right infinite;
+    -moz-animation: 15s slider_left_right infinite;
+    animation: 15s slider_left_right infinite;
+}
+/***ANIMATION***/
+-webkit-@keyframes slider_left_right
+{
+     5% {left:0%;}
+    20% {left:-100%;}
+    30% {left:-100%;}
+    45% {left:-200%;}
+    55% {left:-200%;}
+    70% {left:-100%;}
+    80% {left:-100%;}
+    95% {left:0%;}     
+}
+-moz-@keyframes slider_left_right
+{
+     5% {left:0%;}
+    20% {left:-100%;}
+    30% {left:-100%;}
+    45% {left:-200%;}
+    55% {left:-200%;}
+    70% {left:-100%;}
+    80% {left:-100%;}
+    95% {left:0%;}    
+}
+@keyframes slider_left_right
+{  
+    5%  {left:0%;}
+    20% {left:-100%;}
+    30% {left:-100%;}
+    45% {left:-200%;}
+    55% {left:-200%;}
+    70% {left:-100%;}
+    80% {left:-100%;}
+    95% {left:0%;}   
+}
+#diapositifs li
+{
+    margin:0;
+    padding:0;
+    margin-top:0;
+    float:left;
+    width: 33%;
+}
+#diapositifs li figure
+{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+/***CHRONOLOGIE DU DEFILEMENT D'UNE IMAGE***/
+div #timeline
+{
+    z-index: 10;
+    margin-bottom: 100%;
+    border: 2px solid #41A1CB;
+    width:100%;
+    animation: 15s chronologie infinite;
+    animation-fill-mode:forwards;
+}
+@keyframes chronologie
+{
+    0% {width:100%;}
+    5% {width:0%;}
+    20% {width:100%;}
+    30% {width:0%;}
+    45% {width:100%;}
+    55% {width:0%;}
+    70% {width:100%;}
+    80% {width:0%;}
+    95% {width:100%;}   
+}
+figcaption h1
+{
+    font-family: 'GLYPHICONS Halflings', sans-serif;
+    text-transform: uppercase;
+    color:white;
+    line-height : 15px;
+    margin:0;
+    font-size: 0.6em;    
+}
+h1 strong
+{
+    color:#41A1CB;
+    text-transform: uppercase;
+}
+        /*TEXTE D'ACCROCHE AVEC BOUTON FICTIF*/
+
+#diaporama_description
+{
+    width:auto;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position:absolute;
+    top:40%;
+    left:1%;
+    text-align: left;
+    line-height : 15px;
+}
+#img1 h1
+{
+    font-size: 1.1em;    
+}
+/***BOUTONS FICTIFS***/
+#img1 input
+{
+    font-size: 0.6em;
+    width: 65px;
+    height: 27px;
+}
+#bouton_d2
+{
+    display:none;
+}
+#bouton_g1
+{
+    display:none;
+}
+#bouton_d3
+{
+    display:none;
+}
+#bouton_g2
+{
+    display:none;
+}
+#img1
+{
+    position:absolute;
+    top:10%;
+}
+/*****************************************************************************\
+
+
+                        *2ème SECTION - NOS SERVICES*
+
+
+\*****************************************************************************/
+#mac
+{
+    position: absolute;
+    top:22%;
+    left:2%;
+    text-align: center;
+    width:80%;
+    padding:0;
+}
+        /*ARTICLE*/
+#services article
+{
+    position: absolute;
+    top: 58%;
+    right:5%;
+    width:80%;
+    padding-left:50px;
+    padding:0;
+    padding-right:2%;
+    font-size: 1em;  
+}
+#line /*paramètre de la font awesome line*/
+{
+    position:absolute;
+    right: 100%;
+}
+#cubes /*paramètre de la font awesome cubes*/
+{
+    position:absolute;
+    right: 100%;
+}
+#pie /*paramètre de la font awesome pie*/
+{
+    position:absolute;
+    right: 100%;
+}
+/*****************************************************************************\
+
+
+                        *3ème SECTION - NOS PROJETS*
+
+
+\*****************************************************************************/
+#portfolio
+{
+    padding-top: 20px;
+}
+.item li
+{
+    width:25%;
+}
+.item li a figure:hover .description
+{
+    height:85%;
+}
+.item li a figure .description i
+{
+    position:absolute;
+    top:-14px;
+    padding: 5px;
+}
+.item li a figure .description h4
+{
+    font-size: 0.8em;
+}
+.item li a figure .description h5
+{
+    font-size: 0.8em;
+    line-height: 10px;
+}
+.item li a figure .description h5 strong
+{
+    font-size: 0.8em;
+}
+/* boutons de filtrages */
+.container
+{
+    margin-top: 0;
+}
+.container .boutons
+{
+    justify-content: center;
+    width:90%;
+    margin:auto;
+}
+.container .boutons label
+{
+    font-size:0.8em;
+    width: 90px;
+    height: 30px;
+    transform: translateX(-125%);
+    margin-top:50px;
+    margin-bottom: 50px;  
+}
+.container .boutons label:hover
+{
+    color:tomato;  
+}
+.container label.label_all
+{
+    margin-left:30%;
+}
+.boutons #arrow_all
+{
+    position:absolute;
+    top:98%;
+    left:39%;
+}
+.boutons #arrow_1
+{
+    position:absolute;
+    top:99%;
+    left:40.5%;
+}
+.boutons #arrow_2
+{
+    position:absolute;
+    top:99%;
+    left:40.5%;
+}
+.boutons #arrow_3
+{
+    position:absolute;
+    top:99%;
+    left:40.5%;
+}
+/*****************************************************************************\
+
+
+                        *4ème SECTION - CONTACT INFO*
+
+
+\*****************************************************************************/
+/***FORMULAIRE FICTIF***/
+form
+{
+    position:absolute;
+    right: 5%;
+    width: 30%;
+    height: 70%; 
+}
+/*EN-TETE DU FORMILAIRE*/
+#contact h4
+{
+    margin-left: 10%;
+}
+/*BOUTON-FICTIF D'ENVOI*/
+#submit
+{
+    font-size: 0.7em;
+}
